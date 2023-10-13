@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>BMI Calculator</title>
+        <link rel="shortcut icon" type="image/x-icon" href="fevicon.ico" />
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h2>Calculate Your Body Mass Index</h2>
+    <div class="main">
+            <label for="#">Height :</label>
+            <input type="text" id="height" placeholder="Enter height (in meters)"><br><br>
+            <label for="#">Weight:</label>
+            <input type="text" placeholder="Enter weight (in kg)" id="weight"><br><br>
+            <label for="#">BMI : </label>
+            <input type="text" id="bmi" placeholder="  Your BMI "><br><br>
+            <button id="btn1">Calculate BMI</button><br><br>
+           <button id="btn2" style="width: 200px;">Know Your category:</button> 
+           <input style="width: 200px; height: 38px; margin-top: 10px;" id="ctg" type="text" placeholder="   Category">
+    </div>
+   
+  </div>
+   
+    <script>
+
+let Calculate=() => {         
+  const weight = document.getElementById("weight").value; 
+  const height = document.getElementById("height").value;
+  //Adding error handle
+  if(weight<=0||height<=0){
+   alert("Please Enter the value greater than zero")
+   return;
+  };
+  if(isNaN(weight)||isNaN(height)){
+    alert("Please Enter a Number")
+    return
+  }
+
+  const bmi = weight / Math.pow(height, 2); // BMI formula
+  let finalbmi = bmi.toFixed(3);
+  document.getElementById("bmi").value =finalbmi ;
+console.log(bmi);
+}
+document.getElementById("btn1").addEventListener("click", Calculate);
+
+function showcategory(){
+ let index =  document.getElementById("ctg").value
+ console.log(index);
+ 
+  if(0<index&&index<18.5){
+    document.getElementById("ctg").value = " Under Weight"
+  }
+  else if(24.9>index&&index>=18.5){
+    document.getElementById("ctg").value = " Normal Weight" 
+  }
+  else if(25>=index&&index<=29.9){
+    document.getElementById("ctg").value = " Over Weight"
+  }
+  else {
+    document.getElementById("ctg").value = " Obesity"
+  }
+  
+}
+document.getElementById("btn2").addEventListener("click", showcategory);
+</script>
+</body>
+</html>

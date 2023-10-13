@@ -1,0 +1,54 @@
+body{
+    font-family: cursive;
+       background-color: rgb(210, 179, 206);
+       text-align: center;
+       padding: 50px;
+       margin: -0px;
+      
+}
+
+.container{
+    background-color: rgb(180, 244, 255);
+    border-radius: 20px;
+    border: 3px solid rgb(81, 70, 70);
+    height: 460px;
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+
+}
+    
+  .main{
+  
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+ }
+
+ #btn1 ,#btn2{
+    background-color: rgb(210, 179, 206); 
+ }
+ 
+  input{
+    font-size: large;
+    font-family: cursive;
+    height: 30px;
+    border-radius: 8px;
+    border: 3px solid rgb(51, 51, 51);
+  }
+  button{
+    cursor: pointer;
+    background-color: rgb(147, 255, 255);
+    font-size: 19px;
+    height: 50px;
+    width: 160px;
+    border-radius: 20px;
+    border: 3px solid rgb(81, 70, 70);
+    font-family: cursive;
+  }
+  label{
+    font-size: large;
+  }
